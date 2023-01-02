@@ -1,0 +1,26 @@
+{% include 'base.html' %}
+{% block content %}
+<title>Add Blog</title>
+<style>
+  .form-group{
+    width: 60%;
+    margin: auto;
+  }
+</style>
+    
+{% load crispy_forms_tags %}
+<div class="container text-center mt-5">
+  <h1>Add Blogs</h1>
+ <div class="form-group">
+
+    <form action="" method="POST" enctype="multipart/form-data">
+      {%csrf_token%}
+      {{form | crispy}} <br>
+      <button type="submit" class="btn btn-primary" >submit</button>
+    </div>
+  </div>
+  </form>
+
+
+
+{% endblock %}

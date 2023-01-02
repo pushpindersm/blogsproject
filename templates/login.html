@@ -1,0 +1,21 @@
+{% include 'base.html' %}
+{%block content%}
+<title>Login</title>
+
+{% if messages %}
+
+{% for i in messages %}
+{{i}}
+{% endfor %}
+{% endif %}
+
+<form action="" method="POST">
+    {%csrf_token%}
+    username <input type="text" name="username" placeholder="username">
+    password <input type="password" name="password" placeholder="password">
+    <button type="submit">Submit</button>
+</form>
+
+
+
+{%endblock%}
